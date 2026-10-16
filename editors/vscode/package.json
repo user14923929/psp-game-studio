@@ -1,0 +1,60 @@
+{
+  "name": "pocketpsp-vscode",
+  "displayName": "PSP Game Studio",
+  "description": "Thin VS Code front-end for the pocketpsp CLI",
+  "version": "0.1.0",
+  "license": "GPL-3.0-only",
+  "publisher": "pocketpsp",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:project.toml"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pocketpsp.build",
+        "title": "Build PSP Game"
+      },
+      {
+        "command": "pocketpsp.run",
+        "title": "Run in PPSSPP"
+      },
+      {
+        "command": "pocketpsp.new",
+        "title": "New PSP Project"
+      },
+      {
+        "command": "pocketpsp.check",
+        "title": "Check PSP Game"
+      }
+    ],
+    "configuration": {
+      "title": "PSP Game Studio",
+      "properties": {
+        "pocketpsp.executable": {
+          "type": "string",
+          "default": "pocketpsp",
+          "description": "Path to the pocketpsp command."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user14923929/psp-game-studio.git"
+  }
+}

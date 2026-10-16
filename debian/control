@@ -1,0 +1,17 @@
+Source: pocketpsp
+Section: devel
+Priority: optional
+Maintainer: user14923929 <user14923929@users.noreply.github.com>
+Build-Depends: debhelper-compat (= 13), dh-python, pybuild-plugin-pyproject, python3-all, python3-setuptools
+Standards-Version: 4.6.2
+Homepage: https://github.com/user14923929/psp-game-studio
+Rules-Requires-Root: no
+
+Package: pocketpsp
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, make
+Recommends: ppsspp
+Description: Write Sony PSP homebrew games in a restricted Python DSL
+ pocketpsp checks a restricted subset of Python, generates C code, builds it
+ with the PSP SDK (pspdev, installed separately) and can launch the result in
+ PPSSPP.
